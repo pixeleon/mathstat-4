@@ -1,4 +1,4 @@
-package application;
+package net.pixeleon.khpi.year2;
 
 import java.net.URL;
 import java.util.ArrayList;
