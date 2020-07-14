@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AnovaController">
+   <center>
+      <HBox prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="listViewA" editable="true" prefHeight="250.0" prefWidth="200.0" />
+            <ListView fx:id="listViewB" editable="true" prefHeight="250.0" prefWidth="200.0" />
+            <ListView fx:id="listViewC" editable="true" prefHeight="250.0" prefWidth="200.0" />
+            <ListView fx:id="listViewD" editable="true" prefHeight="250.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+   </center>
+   <top>
+      <GridPane hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="buttonAddA" mnemonicParsing="false" onAction="#doAddA" text="ADD A" GridPane.halignment="CENTER" />
+            <Button fx:id="buttonRemoveA" mnemonicParsing="false" onAction="#doRemoveA" text="REMOVE A" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="buttonAddB" mnemonicParsing="false" onAction="#doAddB" text="ADD B" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Button fx:id="buttonRemoveB" mnemonicParsing="false" onAction="#doRemoveB" text="REMOVE B" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="buttonAddC" mnemonicParsing="false" onAction="#doAddC" text="ADD C" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+            <Button fx:id="buttonRemoveC" mnemonicParsing="false" onAction="#doRemoveC" text="REMOVE C" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="buttonAddD" mnemonicParsing="false" onAction="#doAddD" text="ADD D" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+            <Button fx:id="buttonRemoveD" mnemonicParsing="false" onAction="#doRemoveD" text="REMOVE D" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="buttonAnalyze" mnemonicParsing="false" onAction="#doAnalyze" text="ANALYZE" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+            <Button fx:id="buttonClear" mnemonicParsing="false" onAction="#doClear" text="CLEAR" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </GridPane>
+   </top>
+   <bottom>
+      <GridPane hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="SSw:" />
+            <TextField fx:id="textBoxSSW" maxWidth="50.0" GridPane.halignment="RIGHT" />
+            <Label text="dfw:" GridPane.columnIndex="1" />
+            <Label text="MSw:" GridPane.columnIndex="2" />
+            <Label text="Fcrit:" GridPane.columnIndex="3" />
+            <Label text="p:" GridPane.columnIndex="4" />
+            <Label text="SSb:" GridPane.rowIndex="1" />
+            <Label text="dfb:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="MSb:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Freal:" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="labelConclusion" text="Conclusion:" GridPane.columnSpan="4" GridPane.rowIndex="2" />
+            <TextField fx:id="textBoxDFW" maxWidth="50.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+            <TextField fx:id="textBoxMSW" maxWidth="50.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" />
+            <TextField fx:id="textBoxFCrit" maxWidth="50.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
+            <TextField fx:id="textBoxP" maxWidth="50.0" GridPane.columnIndex="4" GridPane.halignment="RIGHT" />
+            <TextField fx:id="textBoxSSB" maxWidth="50.0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="textBoxDFB" maxWidth="50.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="textBoxMSB" maxWidth="50.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="textBoxFReal" maxWidth="50.0" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <TextField fx:id="textBoxAlpha" maxWidth="50.0" text="0.05" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <Label text="alpha:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </bottom>
+</BorderPane>
